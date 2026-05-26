@@ -1,0 +1,37 @@
+<svg width="100%" viewBox="0 0 680 520" role="img" style="" xmlns="http://www.w3.org/2000/svg">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">SDND Marketing — логотип исправленный</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Логотип SDND: SD сверху белым, ND снизу полупрозрачным, фон тёмно-синий</desc>
+
+  <!-- Квадратный логоблок — контент поднят выше -->
+  <rect x="190" y="40" width="300" height="300" rx="22" fill="#0A1F3D" style="fill:rgb(10, 31, 61);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- SD — белое, поднято -->
+  <text x="340" y="158" text-anchor="middle" dominant-baseline="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="100" font-weight="700" letter-spacing="-4" fill="#FFFFFF" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:100px;font-weight:700;text-anchor:middle;dominant-baseline:middle">SD</text>
+
+  <!-- Разделитель -->
+  <rect x="230" y="193" width="220" height="0.8" fill="rgba(255,255,255,0.15)" style="fill:rgba(255, 255, 255, 0.15);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- ND — полупрозрачное, поднято -->
+  <text x="340" y="248" text-anchor="middle" dominant-baseline="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="100" font-weight="700" letter-spacing="-4" fill="rgba(255,255,255,0.28)" style="fill:rgba(255, 255, 255, 0.28);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:100px;font-weight:700;text-anchor:middle;dominant-baseline:middle">ND</text>
+
+  <!-- Marketing подпись -->
+  <text x="340" y="295" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="10" fill="rgba(255,255,255,0.3)" style="fill:rgba(255, 255, 255, 0.3);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">MARKETING</text>
+
+  <!-- Горизонтальная версия — без лишних линий, чисто -->
+  <text x="190" y="400" font-family="sans-serif" font-size="12" fill="#888" text-anchor="start" style="fill:rgb(136, 136, 136);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Горизонтальная версия — для навбара:</text>
+
+  <rect x="112" y="418" width="456" height="72" rx="12" fill="#0A1F3D" style="fill:rgb(10, 31, 61);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- SD -->
+  <text x="260" y="454" text-anchor="middle" dominant-baseline="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="-2" fill="#FFFFFF" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:36px;font-weight:700;text-anchor:middle;dominant-baseline:middle">SD</text>
+
+  <!-- ND -->
+  <text x="260" y="484" text-anchor="middle" dominant-baseline="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="-2" fill="rgba(255,255,255,0.28)" style="fill:rgba(255, 255, 255, 0.28);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:36px;font-weight:700;text-anchor:middle;dominant-baseline:middle">ND</text>
+
+  <!-- Вертикальный разделитель -->
+  <rect x="300" y="434" width="0.8" height="42" fill="rgba(255,255,255,0.15)" style="fill:rgba(255, 255, 255, 0.15);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Marketing -->
+  <text x="395" y="469" text-anchor="middle" dominant-baseline="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" letter-spacing="5" fill="rgba(255,255,255,0.4)" style="fill:rgba(255, 255, 255, 0.4);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:11px;font-weight:400;text-anchor:middle;dominant-baseline:middle">MARKETING</text>
+
+</svg>

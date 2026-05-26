@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SDND Marketing — V3 Bold</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0D2B4E;
+    --navy-2:#0A1F3D;
+    --navy-3:#081A33;
+    --mid:#1A5F9E;
+    --mid-2:#2D7AC1;
+    --light:#E8F0F8;
+    --light-2:#F2F6FB;
+    --ink:#1F2937;
+    --ink-2:#374151;
+    --grey:#6B7280;
+    --grey-2:#9CA3AF;
+    --line:#E5E7EB;
+    --line-2:#EEF1F4;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--white);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","ss02"}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow .ln{width:24px;height:2px;background:var(--mid);display:inline-block}
+  .eyebrow.on-dark{color:#9DC4EE}
+  .eyebrow.on-dark .ln{background:#9DC4EE}
+
+  /* NAV */
+  nav.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav.top .row{display:flex;align-items:center;justify-content:space-between;height:80px}
+  .logo{display:inline-flex;align-items:center;gap:12px}
+  .logo-mark{width:40px;height:40px;background:var(--navy);border-radius:10px;display:grid;place-items:center;color:#fff;position:relative;overflow:hidden}
+  .logo-mark .sd{font-weight:800;font-size:14px;letter-spacing:-0.04em;line-height:1;margin-top:-1px}
+  .logo-mark .nd{font-weight:800;font-size:14px;letter-spacing:-0.04em;line-height:1;color:rgba(255,255,255,0.28);margin-top:2px}
+  .logo-mark .div{width:18px;height:1px;background:rgba(255,255,255,0.2);margin:1px 0}
+  .logo-word{display:flex;flex-direction:column;line-height:1}
+  .logo-word b{font-weight:800;font-size:17px;letter-spacing:-0.02em;color:var(--navy)}
+  .logo-word span{font-size:10px;letter-spacing:0.24em;color:var(--grey);text-transform:uppercase;margin-top:4px;font-weight:600}
+  nav.top ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600;color:var(--ink)}
+  nav.top ul a{padding:8px 0;position:relative;transition:color .15s}
+  nav.top ul a:hover{color:var(--mid)}
+
+  /* mobile hamburger + dropdown menu (hidden on desktop) */
+  .nav-toggle{display:none;width:42px;height:42px;border-radius:10px;border:1.5px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;color:var(--navy);padding:0;transition:all .18s;flex-shrink:0}
+  .nav-toggle:hover{border-color:var(--navy);background:var(--light)}
+  .nav-toggle .bars{display:flex;flex-direction:column;gap:5px;width:18px}
+  .nav-toggle .bars i{display:block;height:2px;background:currentColor;border-radius:2px;transition:transform .25s,opacity .2s}
+  .nav-toggle[aria-expanded="true"] .bars i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] .bars i:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] .bars i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* dropdown card — anchored to .nav-right */
+  .nav-right{position:relative;display:flex;align-items:center;gap:10px}
+  .nav-menu{position:absolute;top:calc(100% + 12px);right:0;min-width:240px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 48px -16px rgba(13,43,78,0.22),0 4px 12px rgba(13,43,78,0.08);padding:8px;display:none;flex-direction:column;gap:2px;z-index:60;opacity:0;transform:translateY(-6px);transition:opacity .18s,transform .18s}
+  .nav-menu.open{display:flex;opacity:1;transform:translateY(0)}
+  .nav-menu a{padding:12px 14px;font-size:15px;font-weight:600;color:var(--navy);border-radius:8px;letter-spacing:-0.005em;transition:background .15s}
+  .nav-menu a:hover{background:var(--light)}
+  .nav-menu .divider{height:1px;background:var(--line);margin:6px 4px}
+  .nav-menu .menu-cta{margin-top:2px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 14px;font-size:14px;font-weight:700;background:var(--navy);color:#fff;border-radius:10px;letter-spacing:-0.005em}
+  .nav-menu .menu-cta:hover{background:#06152b;color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:10px;font:inherit;font-weight:700;font-size:14px;padding:13px 22px;border-radius:10px;border:1.5px solid transparent;cursor:pointer;transition:all .18s;font-family:inherit;letter-spacing:-0.005em}
+  .btn-primary{background:var(--navy);color:#fff}
+  .btn-primary:hover{background:#06152b;transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(13,43,78,0.4)}
+  .btn-ghost{background:transparent;border-color:rgba(255,255,255,0.3);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.6)}
+  .btn-outline{background:transparent;border-color:var(--navy);color:var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+  .btn-white{background:#fff;color:var(--navy)}
+  .btn-white:hover{transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(0,0,0,0.3)}
+  .arr{width:14px;height:14px}
+
+  /* HERO — confident, centered, bento below */
+  section.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;border-bottom:1px solid var(--navy-2)}
+  .hero-bg{position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(800px 600px at 50% -10%, rgba(26,95,158,0.55), transparent 60%),
+      radial-gradient(500px 500px at 0% 100%, rgba(26,95,158,0.25), transparent 60%);
+  }
+  .hero-mesh{position:absolute;inset:0;background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 75%);
+  }
+  .hero-inner{position:relative;padding:96px 0 0;text-align:center}
+  .hero h1{font-size:104px;line-height:0.95;letter-spacing:-0.04em;margin:28px auto 28px;font-weight:800;max-width:1100px;text-wrap:balance}
+  .hero h1 .bl{color:#9DC4EE;font-weight:700}
+  .hero p.sub{font-size:22px;line-height:1.4;color:rgba(255,255,255,0.86);margin:0 auto 16px;max-width:680px;font-weight:500}
+  .hero p.supp{font-size:16px;line-height:1.6;color:rgba(255,255,255,0.6);max-width:680px;margin:0 auto 36px}
+  .cta-row{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .hero-channels{display:flex;justify-content:center;gap:32px;align-items:center;flex-wrap:wrap;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.55);font-size:13px;font-weight:600;letter-spacing:0.01em}
+  .hero-channels .lbl{color:rgba(255,255,255,0.4);letter-spacing:0.2em;font-size:11px;text-transform:uppercase;margin-right:8px}
+  .hero-channels .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.3)}
+
+  /* STATS — overlaps slightly into hero */
+  .stats-wrap{position:relative;padding:80px 0 0}
+  .stats{background:var(--navy-2);border:1px solid rgba(255,255,255,0.08);border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+  .stat{padding:36px 32px;border-left:1px solid rgba(255,255,255,0.08);color:#fff}
+  .stat:first-child{border-left:none}
+  .stat .n{font-size:54px;line-height:0.95;letter-spacing:-0.035em;font-weight:700;margin-bottom:8px}
+  .stat .n .bl{color:#9DC4EE}
+  .stat .l{font-size:13px;color:rgba(255,255,255,0.6);font-weight:500;letter-spacing:0.01em}
+
+  /* SECTION */
+  .sec{padding:140px 0;border-top:1px solid var(--line)}
+  .sec.tint{background:var(--light-2);border-top:none}
+  .sec.navy{background:var(--navy);color:#fff;border-top:none}
+  .sec.navy h2{color:#fff}
+  .sec.navy .sec-sub{color:rgba(255,255,255,0.7)}
+  .sec.navy .eyebrow{color:#9DC4EE}
+  .sec.navy .eyebrow .ln{background:#9DC4EE}
+  .sec-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:72px}
+  .sec-head.center{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .sec-head h2{margin:14px 0 0;font-size:64px;line-height:1;letter-spacing:-0.035em;font-weight:800;color:var(--navy);text-wrap:balance}
+  .sec-head .sec-sub{margin:0;font-size:18px;line-height:1.55;color:var(--grey);max-width:560px}
+  .sec-head.center .sec-sub{margin-top:20px}
+
+  /* SERVICES — 2-col big cards per brief */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .svc{background:var(--light-2);border:1px solid var(--line);border-radius:18px;padding:40px;display:flex;flex-direction:column;gap:20px;position:relative;transition:all .25s;overflow:hidden}
+  .svc:hover{background:var(--light);border-color:var(--mid);transform:translateY(-3px);box-shadow:0 24px 48px -16px rgba(13,43,78,0.18)}
+  .svc-top{display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .svc-ic{width:52px;height:52px;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--navy);box-shadow:0 1px 0 rgba(13,43,78,0.04),0 4px 12px rgba(13,43,78,0.06);flex-shrink:0}
+  .svc-meta{font-size:12px;color:var(--grey);font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
+  .svc h3{margin:0;font-size:26px;letter-spacing:-0.02em;color:var(--navy);font-weight:800}
+  .svc p{margin:0;font-size:15px;line-height:1.6;color:var(--ink-2)}
+  .svc-arr{margin-top:auto;display:inline-flex;align-items:center;gap:8px;color:var(--mid);font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase}
+
+  /* PROCESS — horizontal numbered timeline */
+  .proc{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+  .proc::before{content:"";position:absolute;left:32px;right:32px;top:30px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 16px)}
+  .step{padding:0 18px;text-align:left;position:relative;display:flex;flex-direction:column;gap:14px}
+  .step .num{width:60px;height:60px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:18px;font-weight:800;letter-spacing:-0.02em;border:3px solid #fff;box-shadow:0 0 0 1px var(--navy);position:relative;z-index:1}
+  .step:hover .num{background:var(--mid);box-shadow:0 0 0 1px var(--mid)}
+  .step h4{margin:6px 0 0;font-size:20px;color:var(--navy);font-weight:700;letter-spacing:-0.01em}
+  .step p{margin:0;font-size:14px;line-height:1.55;color:var(--grey)}
+
+  /* MODEL — 2 col comparison per brief */
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+  .vs-col{padding:44px 36px;border-radius:18px;display:flex;flex-direction:column}
+  .vs-col.them{background:#F4F5F7;border:1px solid var(--line)}
+  .vs-col.us{background:var(--light);border:2px solid var(--navy);position:relative;box-shadow:0 24px 48px -20px rgba(13,43,78,0.25)}
+  .vs-col h3{display:flex;align-items:center;justify-content:space-between;margin:0 0 28px;font-size:14px;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);font-weight:700}
+  .vs-col.us h3{color:var(--navy)}
+  .vs-col .badge{background:var(--navy);color:#fff;font-size:10px;letter-spacing:0.14em;padding:6px 10px;border-radius:6px;font-weight:800}
+  .vs-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
+  .vs-col li{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;font-size:15px;line-height:1.5}
+  .vs-col.them li{color:var(--grey)}
+  .vs-col.us li{color:var(--ink)}
+  .ic-x,.ic-tick{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;margin-top:1px;font-size:11px;font-weight:800}
+  .ic-x{background:#fff;color:var(--grey-2);border:1px solid var(--line)}
+  .ic-tick{background:var(--navy);color:#fff}
+
+  /* CASES — each case is its own block per brief */
+  .cases-stack{display:flex;flex-direction:column;gap:24px}
+  .case{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:all .25s}
+  .case:hover{border-color:var(--mid);box-shadow:0 24px 48px -20px rgba(13,43,78,0.15)}
+  .case-band{background:var(--navy);color:#fff;padding:18px 36px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .case-band .l{display:flex;align-items:center;gap:18px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700}
+  .case-band .l .n{background:rgba(255,255,255,0.12);padding:5px 10px;border-radius:5px;letter-spacing:0.08em}
+  .case-band .r{font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:0.12em;text-transform:uppercase;font-weight:600}
+  .case-body{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 36px}
+  .case h3{margin:0 0 12px;font-size:32px;line-height:1.1;letter-spacing:-0.025em;color:var(--navy);font-weight:800;text-wrap:balance}
+  .case .niche{font-size:13px;color:var(--mid);margin-bottom:24px;font-weight:600;letter-spacing:0.02em}
+  .case .body p{font-size:15px;line-height:1.6;color:var(--ink-2);margin:0 0 12px}
+  .case .body p b{color:var(--navy);font-weight:700;display:block;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px;margin-top:14px}
+  .case .body p:first-child b{margin-top:0}
+  .metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-self:start}
+  .metric{background:var(--light);padding:24px 22px;border-radius:14px}
+  .metric .v{font-size:36px;line-height:1;letter-spacing:-0.03em;color:var(--navy);font-weight:800;margin-bottom:8px}
+  .metric .l{font-size:12px;color:var(--ink-2);font-weight:600;letter-spacing:0.02em;line-height:1.35}
+
+  /* AUDIENCE */
+  .aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .aud-tile{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 28px;transition:all .2s}
+  .aud-tile:hover{border-color:var(--navy);transform:translateY(-2px);box-shadow:0 14px 32px -16px rgba(13,43,78,0.18)}
+  .aud-tile .ic{width:44px;height:44px;border-radius:11px;background:var(--light);color:var(--navy);display:grid;place-items:center;margin-bottom:20px}
+  .aud-tile h4{margin:0 0 10px;font-size:20px;color:var(--navy);font-weight:800;letter-spacing:-0.015em}
+  .aud-tile p{margin:0;font-size:14px;line-height:1.55;color:var(--grey)}
+  .aud-tile.feature{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .aud-tile.feature h4{color:#fff}
+  .aud-tile.feature p{color:rgba(255,255,255,0.7)}
+  .aud-tile.feature .ic{background:rgba(255,255,255,0.08);color:#fff}
+
+  /* ABOUT — navy panel with pullquote per brief */
+  .about-panel{background:var(--navy);border-radius:24px;padding:80px 72px;position:relative;overflow:hidden;color:#fff}
+  .about-panel::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(600px 400px at 20% 0%, rgba(26,95,158,0.45), transparent 60%),
+    radial-gradient(500px 400px at 100% 100%, rgba(26,95,158,0.25), transparent 60%);
+  }
+  .about-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .about-grid h2{margin:18px 0 28px;font-size:48px;line-height:1.05;letter-spacing:-0.03em;font-weight:800;color:#fff;text-wrap:balance}
+  .about-grid p{margin:0 0 16px;font-size:16px;line-height:1.7;color:rgba(255,255,255,0.75)}
+  .about-grid p b{color:#fff;font-weight:700}
+  .pullquote{font-size:36px;line-height:1.2;letter-spacing:-0.02em;color:#fff;font-weight:700;text-wrap:balance}
+  .pullquote::before{content:"";display:block;width:48px;height:3px;background:#9DC4EE;margin-bottom:28px}
+  .pullquote em{font-style:normal;color:#9DC4EE}
+
+  /* FAQ */
+  .faq-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  details.q{border-bottom:1px solid var(--line);transition:background .2s}
+  details.q[open]{background:var(--light-2)}
+  details.q summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 24px;cursor:pointer;font-size:18px;font-weight:700;color:var(--navy);letter-spacing:-0.01em}
+  details.q summary::-webkit-details-marker{display:none}
+  details.q .chev{width:40px;height:40px;border-radius:50%;background:var(--light);color:var(--navy);display:grid;place-items:center;flex-shrink:0;transition:all .25s}
+  details.q[open] .chev{background:var(--navy);color:#fff;transform:rotate(180deg)}
+  details.q .ans{padding:0 24px 28px 24px;font-size:15px;line-height:1.65;color:var(--ink-2);max-width:820px}
+
+  /* CONTACT FORM */
+  .contact-grid{display:grid;grid-template-columns:0.78fr 1.22fr;gap:48px;align-items:start}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:36px;box-shadow:0 24px 48px -28px rgba(13,43,78,0.18)}
+  .contact-card h3{margin:0 0 14px;font-size:34px;line-height:1.08;letter-spacing:-0.03em;color:var(--navy)}
+  .contact-card p{margin:0 0 22px;font-size:15px;line-height:1.65;color:var(--grey)}
+  .contact-points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+  .contact-points li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5;color:var(--ink-2)}
+  .contact-points span{width:26px;height:26px;border-radius:50%;background:var(--light);color:var(--navy);display:grid;place-items:center;font-size:12px;font-weight:800}
+  .contact-form{background:var(--navy);border-radius:20px;padding:36px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 28px 56px -28px rgba(13,43,78,0.45)}
+  .field{display:flex;flex-direction:column;gap:8px}
+  .field.full{grid-column:1 / -1}
+  .field label{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.66)}
+  .field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.08);color:#fff;border-radius:10px;padding:14px 14px;font:inherit;font-size:14px;outline:none}
+  .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,0.44)}
+  .field select option{color:var(--ink)}
+  .field textarea{min-height:132px;resize:vertical}
+  .form-note{grid-column:1 / -1;margin:2px 0 0;color:rgba(255,255,255,0.56);font-size:12px;line-height:1.5}
+  .contact-form .btn{grid-column:1 / -1;justify-content:center;background:#fff;color:var(--navy);margin-top:4px}
+  .contact-form .btn:hover{transform:translateY(-1px);box-shadow:0 14px 32px -12px rgba(0,0,0,0.32)}
+
+  /* FINAL CTA — navy full-width per brief */
+  .final{background:var(--navy);color:#fff;text-align:center;padding:160px 0;position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(800px 600px at 50% 100%, rgba(26,95,158,0.45), transparent 60%);
+  }
+  .final h2{position:relative;font-size:104px;line-height:0.95;letter-spacing:-0.04em;margin:24px 0 28px;font-weight:800;color:#fff}
+  .final h2 .bl{color:#9DC4EE}
+  .final p{position:relative;font-size:20px;color:rgba(255,255,255,0.75);max-width:620px;margin:0 auto 40px;line-height:1.5}
+  .final .row{position:relative;display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .final .note{position:relative;margin-top:28px;font-size:14px;color:rgba(255,255,255,0.5);font-weight:500}
+
+  /* FOOTER */
+  footer{background:var(--navy-3);color:rgba(255,255,255,0.65);padding:80px 0 28px;font-size:14px}
+  .ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .ft-grid h5{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 20px;font-weight:700}
+  .ft-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:14px}
+  .ft-grid li a:hover{color:#fff}
+  .ft-tag{color:rgba(255,255,255,0.55);margin-top:16px;max-width:300px;line-height:1.55}
+  .ft-bot{display:flex;justify-content:space-between;padding-top:24px;font-size:13px;color:rgba(255,255,255,0.4)}
+
+  .cookie-banner{position:fixed;left:24px;right:24px;bottom:24px;z-index:80;max-width:960px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 56px -20px rgba(13,43,78,0.32);padding:18px;display:none;grid-template-columns:1fr auto;gap:18px;align-items:center}
+  .cookie-banner.show{display:grid}
+  .cookie-banner p{margin:0;font-size:13px;line-height:1.55;color:var(--ink-2)}
+  .cookie-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .cookie-actions button{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:9px;padding:10px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+  .cookie-actions .accept{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+  /* logo white variant */
+  .logo.dark .logo-word b{color:#fff}
+  .logo.dark .logo-word span{color:rgba(255,255,255,0.5)}
+
+  /* ────────── RESPONSIVE ────────── */
+  @media (max-width: 1100px) {
+    .wrap{padding:0 28px}
+    .hero h1{font-size:72px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(3){border-left:none;border-top:1px solid rgba(255,255,255,0.08)}
+    .stat:nth-child(4){border-top:1px solid rgba(255,255,255,0.08)}
+    .sec{padding:96px 0}
+    .sec-head{grid-template-columns:1fr;gap:24px;margin-bottom:48px}
+    .sec-head h2{font-size:44px}
+    .proc{grid-template-columns:repeat(3,1fr);row-gap:48px}
+    .proc::before{display:none}
+    .svc-grid{grid-template-columns:1fr 1fr}
+    .vs{grid-template-columns:1fr}
+    .case-body{grid-template-columns:1fr;gap:28px}
+    .aud-grid{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1fr}
+    .about-panel{padding:56px 40px}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .about-grid h2{font-size:36px}
+    .pullquote{font-size:28px}
+    .final{padding:96px 0}
+    .final h2{font-size:64px}
+    .ft-grid{grid-template-columns:1fr 1fr;gap:36px}
+  }
+  @media (max-width: 720px) {
+    .wrap{padding:0 22px}
+    nav.top .row{height:64px}
+    nav.top ul{display:none}
+    .nav-toggle{display:inline-flex}
+    nav.top .btn-primary{display:none}
+    .logo-word b{font-size:15px}
+    .logo-word span{font-size:9px;letter-spacing:0.2em}
+    .btn{padding:13px 18px;font-size:14px}
+    .hero-inner{padding:56px 0 0}
+    .hero h1{font-size:42px;line-height:1.02;margin:18px auto 18px;letter-spacing:-0.03em}
+    .hero p.sub{font-size:17px}
+    .hero p.supp{font-size:14px;margin-bottom:28px}
+    .cta-row{display:flex;flex-direction:column;align-items:stretch;gap:10px;width:auto;max-width:320px;margin:0 auto}
+    .cta-row .btn{justify-content:center;width:100%;padding:14px 18px}
+    .hero-channels{gap:14px;font-size:12px;margin-top:36px;padding-top:24px}
+    .hero-channels .lbl{flex-basis:100%;text-align:center;margin-bottom:4px;margin-right:0}
+    .stats-wrap{padding:48px 0 0}
+    .stats{grid-template-columns:1fr;border-radius:14px}
+    .stat{border-left:none;border-top:1px solid rgba(255,255,255,0.08);padding:24px 24px}
+    .stat:first-child{border-top:none}
+    .stat .n{font-size:42px}
+    .sec{padding:64px 0}
+    .sec-head h2{font-size:32px;letter-spacing:-0.025em}
+    .sec-head .sec-sub{font-size:15px}
+    .svc-grid{grid-template-columns:1fr;gap:10px}
+    .svc{padding:28px 24px}
+    .svc h3{font-size:22px}
+    .svc p{font-size:14px}
+    .proc{grid-template-columns:1fr;row-gap:24px}
+    .step{padding:0 4px;gap:10px}
+    .step .num{width:48px;height:48px;font-size:15px}
+    .step h4{font-size:18px}
+    .step p{font-size:13px}
+    .vs-col{padding:28px 22px}
+    .vs-col li{font-size:14px}
+    .case-band{padding:14px 22px;flex-direction:column;align-items:flex-start;gap:8px}
+    .case-band .l{font-size:11px;gap:10px;flex-wrap:wrap}
+    .case-body{padding:28px 22px}
+    .case h3{font-size:22px}
+    .metrics{grid-template-columns:1fr 1fr}
+    .metric{padding:18px}
+    .metric .v{font-size:26px}
+    .aud-grid{grid-template-columns:1fr;gap:8px}
+    .aud-tile{padding:24px 22px}
+    .contact-card,.contact-form{padding:24px}
+    .contact-form{grid-template-columns:1fr}
+    .about-panel{padding:36px 24px;border-radius:18px}
+    .about-grid h2{font-size:28px;margin:14px 0 18px}
+    .about-grid p{font-size:14px}
+    .pullquote{font-size:22px}
+    .pullquote::before{margin-bottom:18px}
+    details.q summary{font-size:15px;padding:20px;gap:14px}
+    details.q .chev{width:32px;height:32px}
+    details.q .ans{padding:0 20px 22px;font-size:14px}
+    .final{padding:72px 0}
+    .final h2{font-size:44px}
+    .final p{font-size:16px;margin-bottom:28px}
+    .final .row{display:flex;flex-direction:column;width:auto;max-width:320px;margin:0 auto;gap:10px}
+    .final .row .btn{width:100%;justify-content:center;padding:14px 18px}
+    .final .note{font-size:12px}
+    .ft-grid{grid-template-columns:1fr;gap:32px;padding-bottom:32px}
+    .ft-bot{flex-direction:column;gap:6px;font-size:11px}
+    .cookie-banner{left:14px;right:14px;bottom:14px;grid-template-columns:1fr}
+    .cookie-actions button{flex:1}
+  }
+  @media (max-width: 720px) {
+    html{scroll-padding-top:72px}
+    .wrap{padding:0 20px}
+    .btn{
+      width:100%;
+      min-height:48px;
+      justify-content:center;
+      text-align:center;
+      line-height:1.25;
+      white-space:normal;
+    }
+    .btn .arr{flex:0 0 14px}
+    .nav-menu .menu-cta{width:100%}
+    .hero-inner{padding:52px 0 0}
+    .hero h1{max-width:360px}
+    .hero p.sub,.hero p.supp{max-width:340px}
+    .cta-row,.final .row{width:100%;max-width:340px}
+    .hero-channels{margin-left:auto;margin-right:auto;max-width:340px}
+    .stats-wrap{padding-top:36px}
+    .sec{padding:72px 0}
+    .sec-head{gap:16px;margin-bottom:34px}
+    .sec-head.center{margin-bottom:34px}
+    .svc-grid,.cases-stack,.aud-grid{gap:14px}
+    .svc,.aud-tile,.contact-card,.contact-form{margin-inline:0}
+    .proc{row-gap:18px}
+    .step{
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+    }
+    .case-band{padding:18px 20px}
+    .case-band .l{width:100%;line-height:1.45}
+    .case-body{padding:24px 20px;gap:22px}
+    .metrics{grid-template-columns:1fr;gap:10px}
+    .metric{padding:18px 16px}
+    .about-panel{margin:0;border-radius:16px}
+    .contact-grid{gap:18px}
+    .contact-form .btn{margin-top:8px}
+    .final{padding:78px 0}
+    .final p{max-width:340px}
+    .cookie-actions{display:grid;grid-template-columns:1fr;gap:8px}
+  }
+</style>
+</head>
+<body data-screen-label="V3 Bold">
+
+<!-- NAV -->
+<nav class="top">
+  <div class="wrap row">
+    <a class="logo" href="#">
+      <span class="logo-mark">
+        <span class="sd">SD</span>
+        <span class="div"></span>
+        <span class="nd">ND</span>
+      </span>
+      <span class="logo-word"><b>SDND Marketing</b><span>Performance Agency</span></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#cases">Case Studies</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact-form">Book a Call</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-primary" href="#contact-form">Book a Call <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu" aria-controls="navMenu">
+        <span class="bars"><i></i><i></i><i></i></span>
+      </button>
+      <div class="nav-menu" id="navMenu" role="menu">
+        <a href="#services">Services</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#about">About</a>
+        <div class="divider"></div>
+        <a href="#contact-form" class="menu-cta">Book a Call <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  (function(){
+    var t=document.getElementById('navToggle'),m=document.getElementById('navMenu');
+    if(!t||!m)return;
+    var close=function(){m.classList.remove('open');t.setAttribute('aria-expanded','false')};
+    t.addEventListener('click',function(e){
+      e.stopPropagation();
+      var open=!m.classList.contains('open');
+      m.classList.toggle('open',open);
+      t.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('click',function(e){if(!m.contains(e.target)&&!t.contains(e.target))close()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+    window.addEventListener('resize',function(){if(window.innerWidth>720)close()});
+  })();
+</script>
+
+<!-- HERO + STATS -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-mesh"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow on-dark"><span class="ln"></span>Performance · Revenue-Share Agency</span>
+    <h1>Performance marketing that <span class="bl">pays for itself.</span></h1>
+    <p class="sub">We only get paid when you grow. No retainers. No fluff. Just results.</p>
+    <p class="supp">SDND Marketing is a performance-only growth agency. We run paid advertising across Meta, Google, TikTok, LinkedIn, Amazon and Reddit — and we earn our fee as a percentage of the revenue we generate. If we don't deliver, you don't pay.</p>
+    <div class="cta-row">
+      <a class="btn btn-white" href="#contact-form">Book a Call <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      <a class="btn btn-ghost" href="#cases">See Our Results</a>
+    </div>
+    <div class="hero-channels">
+      <span class="lbl">Channels</span>
+      <span>Meta</span><span class="dot"></span>
+      <span>Google</span><span class="dot"></span>
+      <span>TikTok</span><span class="dot"></span>
+      <span>LinkedIn</span><span class="dot"></span>
+      <span>Amazon</span><span class="dot"></span>
+      <span>Reddit</span>
+    </div>
+  </div>
+
+  <div class="wrap stats-wrap">
+    <div class="stats">
+      <div class="stat"><div class="n">3<span class="bl">+</span></div><div class="l">Years in Business</div></div>
+      <div class="stat"><div class="n">£500K<span class="bl">+</span></div><div class="l">Ad Spend Managed</div></div>
+      <div class="stat"><div class="n">10<span class="bl">+</span></div><div class="l">Markets Launched</div></div>
+      <div class="stat"><div class="n">0%</div><div class="l">Retainer Fee</div></div>
+    </div>
+  </div>
+  <div style="height:80px"></div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="ln"></span>Services<span class="ln"></span></span>
+      <h2>We grow brands across every<br>major paid channel.</h2>
+      <p class="sec-sub">One agency. Six channels. Zero retainer. You only pay when we deliver revenue.</p>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="svc-top">
+          <div class="svc-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7C18.3 21.1 22 17 22 12 22 6.5 17.5 2 12 2Z" fill="currentColor"/></svg>
+          </div>
+          <span class="svc-meta">01 · Social</span>
+        </div>
+        <h3>Meta Ads</h3>
+        <p>Facebook &amp; Instagram advertising built around your numbers — CAC, MER, contribution margin. We don't chase clicks. We chase profitable revenue.</p>
+        <span class="svc-arr">Facebook · Instagram <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </div>
+
+      <div class="svc">
+        <div class="svc-top">
+          <div class="svc-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4c-.2 1.2-.9 2.3-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4Z" fill="#4285F4"/>
+              <path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6C4.8 19.9 8.1 22 12 22Z" fill="#34A853"/>
+              <path d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1A10 10 0 0 0 2 12c0 1.6.4 3.2 1.1 4.6L6.4 14Z" fill="#FBBC05"/>
+              <path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8C16.9 2.9 14.7 2 12 2 8.1 2 4.8 4.1 3.1 7.4l3.3 2.6c.8-2.3 3-4.1 5.6-4.1Z" fill="#EA4335"/>
+            </svg>
+          </div>
+          <span class="svc-meta">02 · Search</span>
+        </div>
+        <h3>Google Ads</h3>
+        <p>Search, Shopping, and Performance Max — structured to bring in customers who are ready to buy, at a cost that makes commercial sense.</p>
+        <span class="svc-arr">Search · Shopping · PMax <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </div>
+
+      <div class="svc">
+        <div class="svc-top">
+          <div class="svc-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M19.6 6.7c-1.4-.3-2.6-1.1-3.5-2.3-.3-.4-.5-.9-.6-1.4h-3.3v13.5c0 1.4-1.1 2.6-2.6 2.6s-2.6-1.2-2.6-2.6 1.1-2.6 2.6-2.6c.3 0 .5 0 .8.1V10.6c-.3 0-.5 0-.8 0-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6V9.2c1.3.9 2.9 1.5 4.6 1.5V7.5c-.3 0-.4-.5-.6-.8Z" fill="currentColor"/></svg>
+          </div>
+          <span class="svc-meta">03 · Video</span>
+        </div>
+        <h3>TikTok Ads</h3>
+        <p>Short-form video advertising that reaches new audiences at scale. Creative-led, data-backed, and optimised to convert scroll into sales.</p>
+        <span class="svc-arr">Short-form · UGC <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </div>
+
+      <div class="svc">
+        <div class="svc-top">
+          <div class="svc-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20.4 3H3.6C2.7 3 2 3.7 2 4.6v14.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V4.6c0-.9-.7-1.6-1.6-1.6ZM8 18.3H5.3v-8.7H8v8.7ZM6.7 8.4c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6Zm12 9.9H16v-4.2c0-1 0-2.3-1.4-2.3-1.4 0-1.6 1.1-1.6 2.2v4.3h-2.7V9.6h2.6v1.2c.4-.7 1.3-1.4 2.6-1.4 2.8 0 3.3 1.8 3.3 4.2v4.7Z" fill="#0A66C2"/></svg>
+          </div>
+          <span class="svc-meta">04 · B2B</span>
+        </div>
+        <h3>LinkedIn Ads</h3>
+        <p>B2B and professional audience targeting. Ideal for brands selling to businesses or high-income consumers — where precision matters more than volume.</p>
+        <span class="svc-arr">B2B · High-AOV <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </div>
+
+      <div class="svc">
+        <div class="svc-top">
+          <div class="svc-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M14.7 14.4c-1.8 1.3-4.4 2-6.7 2-3.2 0-6-1.2-8.2-3.1-.2-.2 0-.4.2-.3 2.3 1.4 5.2 2.2 8.2 2.2 2.1 0 4.4-.4 6.5-1.3.3-.1.6.2.3.5Z" fill="#FF9900" transform="translate(4)"/>
+              <path d="M15.4 13.7c-.2-.3-1.5-.1-2.1 0-.2 0-.2-.1-.1-.2 1-.7 2.7-.5 2.9-.3.2.3-.1 2-1 2.8-.1.1-.3 0-.2-.1.3-.7.7-2 .5-2.2Z" fill="#FF9900" transform="translate(4)"/>
+              <path d="M13.3 4.2v-.8c0-.1.1-.2.2-.2h3.2c.1 0 .2.1.2.2v.6c0 .1-.1.3-.2.4l-1.7 2.4c.6 0 1.3.1 1.8.4.1.1.2.2.2.4v.7c0 .1-.1.2-.3.2-1-.5-2.2-.5-3.2 0-.1 0-.3 0-.3-.1v-.7c0-.2 0-.4.1-.6l1.9-2.8h-1.7c-.1 0-.2-.1-.2-.2Z" fill="#232F3E" transform="translate(-2)"/>
+            </svg>
+          </div>
+          <span class="svc-meta">05 · Marketplace</span>
+        </div>
+        <h3>Amazon Ads</h3>
+        <p>Sponsored Products, Sponsored Brands, and DSP — capturing buyers at the bottom of the funnel when purchase intent is highest.</p>
+        <span class="svc-arr">Sponsored · DSP <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </div>
+
+      <div class="svc">
+        <div class="svc-top">
+          <div class="svc-ic">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#FF4500"/>
+              <path d="M17.5 11.4c0-.7-.6-1.3-1.3-1.3-.3 0-.6.1-.9.3-.9-.6-2-1-3.3-1.1l.6-2.6 1.8.4c0 .5.4.9.9.9s.9-.4.9-.9-.4-.9-.9-.9c-.3 0-.6.2-.8.4l-2.1-.5c-.1 0-.1 0-.2.1l-.7 3c-1.3 0-2.5.4-3.3 1.1-.2-.2-.5-.3-.9-.3-.7 0-1.3.6-1.3 1.3 0 .5.3.9.7 1.2 0 .2-.1.4-.1.5 0 1.9 2.2 3.4 4.8 3.4 2.7 0 4.8-1.5 4.8-3.4 0-.2 0-.4-.1-.5.4-.2.7-.7.7-1.2ZM9.8 12.3c0-.5.4-.9.9-.9s.9.4.9.9-.4.9-.9.9-.9-.4-.9-.9Zm5 2.4c-.6.6-1.7.7-2.8.7-1.1 0-2.2-.1-2.8-.7-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .4.4 1.2.5 2.4.5s2-.2 2.4-.5c.1-.1.3-.1.4 0 .1.1.1.3 0 .4Zm-.2-1.5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9c0 .5-.4.9-.9.9Z" fill="#fff"/>
+            </svg>
+          </div>
+          <span class="svc-meta">06 · Community</span>
+        </div>
+        <h3>Reddit Ads</h3>
+        <p>Community-first advertising for brands with something real to say. Reddit rewards authenticity — and we know how to make it work commercially.</p>
+        <span class="svc-arr">Community · Niche <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="sec tint">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="ln"></span>How We Work<span class="ln"></span></span>
+      <h2>From first call to<br>profitable growth.</h2>
+      <p class="sec-sub">A clear, repeatable system. Built on data, driven by results.</p>
+    </div>
+
+    <div class="proc">
+      <div class="step">
+        <div class="num">01</div>
+        <h4>Audit</h4>
+        <p>We understand your business — margins, customers, current marketing, real opportunities. No assumptions.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h4>Strategy</h4>
+        <p>Channel strategy specific to your brand: platforms, audiences, offers, success metrics that matter.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h4>Launch</h4>
+        <p>Account setup, campaign structure, creative briefing, tracking — everything live across chosen channels.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h4>Optimise</h4>
+        <p>Constant testing — creatives, audiences, offers, bidding. Scale what works, cut what doesn't.</p>
+      </div>
+      <div class="step">
+        <div class="num">05</div>
+        <h4>Report</h4>
+        <p>Clear, honest reporting on the metrics that matter — revenue, CAC, ROAS, contribution. No vanity.</p>
+      </div>
+      <div class="step">
+        <div class="num">06</div>
+        <h4>Scale</h4>
+        <p>When the numbers work, we scale methodically — more budget, more markets, compounding growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE MODEL -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="ln"></span>The Performance Model<span class="ln"></span></span>
+      <h2>We don't get paid<br>unless you grow.</h2>
+      <p class="sec-sub">Most agencies charge a retainer regardless of results. We don't. Our fee is a percentage of the revenue we generate for you — which means our incentives are perfectly aligned with yours.</p>
+    </div>
+
+    <div class="vs">
+      <div class="vs-col them">
+        <h3>Other Agencies</h3>
+        <ul>
+          <li><span class="ic-x">✕</span><span>Fixed monthly retainer — paid regardless of results</span></li>
+          <li><span class="ic-x">✕</span><span>Generic strategies applied across all clients</span></li>
+          <li><span class="ic-x">✕</span><span>Poor communication and slow reporting</span></li>
+          <li><span class="ic-x">✕</span><span>Cookie-cutter campaign structures</span></li>
+          <li><span class="ic-x">✕</span><span>Focused on ad-spend growth (bigger budgets = bigger fees)</span></li>
+          <li><span class="ic-x">✕</span><span>Weak accountability — they keep the retainer either way</span></li>
+        </ul>
+      </div>
+      <div class="vs-col us">
+        <h3>SDND Marketing <span class="badge">OUR MODEL</span></h3>
+        <ul>
+          <li><span class="ic-tick">✓</span><span>Revenue-share only — we earn when you earn</span></li>
+          <li><span class="ic-tick">✓</span><span>Bespoke strategy built around your margins and goals</span></li>
+          <li><span class="ic-tick">✓</span><span>Clear, honest reporting on the metrics that matter</span></li>
+          <li><span class="ic-tick">✓</span><span>Custom campaign architecture for your specific business</span></li>
+          <li><span class="ic-tick">✓</span><span>Focused on revenue and profitability — not inflating spend</span></li>
+          <li><span class="ic-tick">✓</span><span>Full accountability — our revenue depends on yours</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="sec tint" id="cases">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="ln"></span>Case Studies<span class="ln"></span></span>
+      <h2>Results we've<br>delivered.</h2>
+      <p class="sec-sub">Real campaigns. Real numbers. No inflated figures.</p>
+    </div>
+
+    <div class="cases-stack">
+      <div class="case">
+        <div class="case-band">
+          <div class="l"><span class="n">CASE 01</span><span>Meta + Google Ads</span><span>4 Months</span></div>
+          <div class="r">Subscription Food Delivery · London</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <h3>Food Delivery App Cuts Cost Per Acquisition by 50% in 4 Months.</h3>
+            <div class="niche">— Subscription Food Delivery — London</div>
+            <div class="body">
+              <p><b>The Challenge</b>Strong product but struggling to measure and attribute revenue from paid channels. Tracking was broken, ROAS inconsistent, no clear view of LTV.</p>
+              <p><b>What We Did</b>Rebuilt tracking infrastructure from the ground up, fixed attribution across Meta and Google, restructured campaigns around unit economics and subscriber retention.</p>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">−50%</div><div class="l">Cost Per Acquisition</div></div>
+            <div class="metric"><div class="v">−40%</div><div class="l">CPL (Subscription)</div></div>
+            <div class="metric"><div class="v">+30%</div><div class="l">Customer LTV</div></div>
+            <div class="metric"><div class="v">90%</div><div class="l">6-Month Retention</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-band">
+          <div class="l"><span class="n">CASE 02</span><span>Meta Ads</span><span>7 Months</span></div>
+          <div class="r">Skincare &amp; Beauty · IT · ES · FR</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <h3>Skincare Brand Doubles ROAS Across Three European Markets.</h3>
+            <div class="niche">— Skincare &amp; Beauty — Italy, Spain, France</div>
+            <div class="body">
+              <p><b>The Challenge</b>€70K/month in paid media across three markets, plateaued at 2× ROAS. They needed a strategic overhaul, not just better creative.</p>
+              <p><b>What We Did</b>Restructured account by market, rebuilt audience strategy per country, and introduced a rigorous creative testing framework around the highest-LTV segments.</p>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">2 → 4×</div><div class="l">ROAS Improvement</div></div>
+            <div class="metric"><div class="v">−40%</div><div class="l">CPL Reduction</div></div>
+            <div class="metric"><div class="v">+20%</div><div class="l">New Customer Retention</div></div>
+            <div class="metric"><div class="v">€70K</div><div class="l">Budget Managed Monthly</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-band">
+          <div class="l"><span class="n">CASE 03</span><span>Meta · 8 EU Markets</span><span>Ongoing</span></div>
+          <div class="r">Health &amp; Wellness DTC</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <h3>Health &amp; Wellness Brand Scales 50× Across 8 European Markets.</h3>
+            <div class="niche">— Health &amp; Wellness DTC</div>
+            <div class="body">
+              <p><b>The Challenge</b>Proven product, no international paid-media infrastructure. They wanted to scale across multiple European markets simultaneously without sacrificing efficiency.</p>
+              <p><b>What We Did</b>Built market-by-market campaign structures across 8 countries with systematic creative testing — 20–30 new concepts per week, killing underperformers within 48 hours.</p>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">50×</div><div class="l">Budget Scaled</div></div>
+            <div class="metric"><div class="v">$5–7</div><div class="l">Cost Per Lead</div></div>
+            <div class="metric"><div class="v">7%</div><div class="l">Click-Through Rate</div></div>
+            <div class="metric"><div class="v">10–11%</div><div class="l">Landing Page CVR</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-band">
+          <div class="l"><span class="n">CASE 04</span><span>Meta · Restricted Category</span><span>2 Months</span></div>
+          <div class="r">Financial Education</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <h3>Financial Education Brand Scales 22× in 60 Days in a Restricted Category.</h3>
+            <div class="niche">— Financial Education</div>
+            <div class="body">
+              <p><b>The Challenge</b>Spending $900/month on Meta — stuck in a restricted advertising category with a $40 CPL ceiling and no clear path to scale. Needed to grow fast without burning margin.</p>
+              <p><b>What We Did</b>Built a compliance-first campaign structure designed specifically for restricted categories — combining careful creative strategy with precise audience targeting.</p>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">22×</div><div class="l">Budget Scaled (60 days)</div></div>
+            <div class="metric"><div class="v">$15</div><div class="l">CPL vs $40 Ceiling</div></div>
+            <div class="metric"><div class="v">62%</div><div class="l">Margin Maintained</div></div>
+            <div class="metric"><div class="v">8%</div><div class="l">Click-Through Rate</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-band">
+          <div class="l"><span class="n">CASE 05</span><span>Google Ads · Germany</span><span>4+ Months</span></div>
+          <div class="r">Subscription Meal Delivery · Germany</div>
+        </div>
+        <div class="case-body">
+          <div>
+            <h3>German Subscription Service Holds CPL 35% Below Ceiling for 4 Months.</h3>
+            <div class="niche">— Subscription Meal Delivery — Germany</div>
+            <div class="body">
+              <p><b>The Challenge</b>Running Google Ads with inconsistent CPL and needed a stable, scalable structure. $30 CPL ceiling left little room for error — previous campaigns had frequently exceeded it.</p>
+              <p><b>What We Did</b>Restructured the account around offer testing — 5–6 different offers per week. Rebuilt campaign structure around the most commercially efficient keyword sets, bidding strategies aligned to LTV.</p>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">$19–20</div><div class="l">CPL vs $30 Ceiling</div></div>
+            <div class="metric"><div class="v">~50%</div><div class="l">Net Margin</div></div>
+            <div class="metric"><div class="v">5–6</div><div class="l">Offers Tested Per Week</div></div>
+            <div class="metric"><div class="v">$15K</div><div class="l">Ad Spend Managed Monthly</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="ln"></span>Who We Work With<span class="ln"></span></span>
+      <h2>Built for brands that<br>are ready to grow.</h2>
+      <p class="sec-sub">We work with DTC e-commerce, health &amp; wellness, subscription, and local brands across Europe and North America — at any stage of growth.</p>
+    </div>
+
+    <div class="aud-grid">
+      <div class="aud-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11Z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h4>Health &amp; Wellness</h4>
+        <p>Supplements, fitness, nutrition, mental wellness, personal care.</p>
+      </div>
+      <div class="aud-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7h18l-2 13H5L3 7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 7a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h4>DTC E-Commerce</h4>
+        <p>Fashion, beauty, home, food &amp; beverage, lifestyle brands.</p>
+      </div>
+      <div class="aud-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v6H4zM4 14h16v6H4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h2M8 17h2" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h4>Subscriptions</h4>
+        <p>Food delivery, SaaS, membership, recurring-revenue models.</p>
+      </div>
+      <div class="aud-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h4>Local &amp; Regional</h4>
+        <p>Brands looking to grow beyond their home market into Europe or North America.</p>
+      </div>
+      <div class="aud-tile">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V8l8-4 8 4v12" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h4>Financial &amp; Education</h4>
+        <p>High-consideration categories where trust and compliance expertise matters.</p>
+      </div>
+      <div class="aud-tile feature">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3M12 13v9M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h4>Geography</h4>
+        <p>Europe · United States · Canada. Remote-first. No location barriers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-panel">
+      <div class="about-grid">
+        <div>
+          <span class="eyebrow on-dark"><span class="ln"></span>About SDND Marketing</span>
+          <h2>A performance-only growth agency, built on a simple belief.</h2>
+          <p>SDND Marketing is a performance-only growth agency, built on a simple belief: <b>marketing should pay for itself.</b></p>
+          <p>We've spent the last three years working with DTC brands, subscription businesses, and e-commerce companies across Europe and North America — running paid advertising across Meta, Google, TikTok, LinkedIn, Amazon, and Reddit.</p>
+          <p>Our model is straightforward. We work on a percentage of revenue — no retainers, no fixed monthly fees. We grow when you grow.</p>
+          <p>We're not a full-service agency. We don't do PR, SEO, or social media management. We do one thing: <b>paid acquisition, done properly.</b></p>
+        </div>
+        <div class="pullquote">
+          We only take on clients we genuinely believe we can help. <em>Our revenue depends on yours.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec tint">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="ln"></span>FAQ<span class="ln"></span></span>
+      <h2>Frequently asked.</h2>
+      <p class="sec-sub">Everything you'd ask in the first ten minutes of a call.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="q" open>
+        <summary>How does your pricing model work?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">We work on a percentage of revenue — no retainer, no fixed monthly fee. Our fee is agreed upfront as a percentage of the revenue we generate for you. If we don't deliver, we don't earn.</div>
+      </details>
+      <details class="q">
+        <summary>Which channels do you run?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">Meta (Facebook &amp; Instagram), Google Ads, TikTok Ads, LinkedIn Ads, Amazon Ads, and Reddit Ads. We recommend the right channel mix based on your audience, margins, and goals.</div>
+      </details>
+      <details class="q">
+        <summary>What kind of brands do you work with?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">DTC e-commerce brands, health and wellness companies, subscription businesses, and local brands looking to grow internationally. We work across Europe, the United States, and Canada.</div>
+      </details>
+      <details class="q">
+        <summary>Do you require a minimum ad spend?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">We don't have a universal minimum — it depends on the channel and the brand. We'll tell you honestly in our first call whether your current budget is enough to see meaningful results.</div>
+      </details>
+      <details class="q">
+        <summary>What does the onboarding process look like?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">We start with an audit of your current setup — tracking, ad accounts, landing pages, and performance data. Then we build a bespoke strategy and launch within an agreed timeline. Most clients are live within two to three weeks.</div>
+      </details>
+      <details class="q">
+        <summary>Do you offer creative services?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">We don't produce creative in-house, but we provide detailed creative briefs and strategic direction. We also have trusted creative partners we can refer you to.</div>
+      </details>
+      <details class="q">
+        <summary>How do you measure and report results?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">Revenue generated, CAC, ROAS, MER, and customer lifetime value where applicable. Clear, honest reporting — no vanity metrics.</div>
+      </details>
+      <details class="q">
+        <summary>What markets do you operate in?<span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary>
+        <div class="ans">Primarily Europe (UK, Germany, France, Italy, Spain, and more) and North America (USA and Canada). We've launched campaigns across 10+ international markets.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="sec tint" id="contact-form">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow"><span class="ln"></span>Book a Call</span>
+        <h2>Tell us what growth needs to prove.</h2>
+      </div>
+      <p class="sec-sub">Share a few details about your brand, current channels, and growth target. SDND will use this to qualify whether a revenue-share model makes commercial sense.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Built for a commercial first conversation.</h3>
+        <p>SDND should qualify fit around margins, channel history, current tracking, and whether a revenue-share model makes sense.</p>
+        <ul class="contact-points">
+          <li><span>1</span><div>No retainer and no fixed monthly fee.</div></li>
+          <li><span>2</span><div>Revenue, CAC, ROAS, MER, and LTV are the reporting focus.</div></li>
+          <li><span>3</span><div>Remote-first across Europe, the United States, and Canada.</div></li>
+        </ul>
+      </div>
+
+      <!-- GitHub Pages is static: replace YOUR_FORM_ID with a Formspree endpoint, or swap the action for another static form service. -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New SDND Marketing enquiry">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name">
+        </div>
+        <div class="field">
+          <label for="revenue">Monthly Revenue</label>
+          <select id="revenue" name="monthly-revenue">
+            <option value="">Select range</option>
+            <option>Under £25K</option>
+            <option>£25K-£100K</option>
+            <option>£100K-£500K</option>
+            <option>£500K+</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your current channels, spend, margins, and growth target."></textarea>
+        </div>
+        <p class="form-note">This form is ready for GitHub Pages. Add your static form endpoint in the form action, or email hello@sdnd.marketing directly.</p>
+        <button class="btn" type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="contact">
+  <div class="wrap">
+    <span class="eyebrow on-dark"><span class="ln"></span>Limited Intake · This Quarter</span>
+    <h2>Ready to <span class="bl">grow?</span></h2>
+    <p>We take on a limited number of new clients each quarter to ensure we can deliver properly for everyone we work with. If you're ready to grow — let's talk.</p>
+    <div class="row">
+      <a class="btn btn-white" href="#contact-form">Book a Call <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      <a class="btn btn-ghost" href="#cases">See Our Results</a>
+    </div>
+    <div class="note">No retainer · No commitment · Just a conversation</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <a class="logo dark" href="#">
+          <span class="logo-mark">
+            <span class="sd">SD</span>
+            <span class="div"></span>
+            <span class="nd">ND</span>
+          </span>
+          <span class="logo-word"><b>SDND Marketing</b><span>Performance Agency</span></span>
+        </a>
+        <p class="ft-tag">Performance marketing. Revenue-share model. We grow when you grow.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul><li><a href="#services">Services</a></li><li><a href="#cases">Case Studies</a></li><li><a href="#about">About</a></li><li><a href="#contact-form">Book a Call</a></li></ul>
+      </div>
+      <div>
+        <h5>Channels</h5>
+        <ul><li>Meta · Google</li><li>TikTok · LinkedIn</li><li>Amazon · Reddit</li></ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul><li><a href="mailto:hello@sdnd.marketing">hello@sdnd.marketing</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Instagram</a></li><li style="color:rgba(255,255,255,0.4)">Europe · USA · Canada</li></ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2025 SDND Marketing. All rights reserved.</span>
+      <span>Performance · Revenue-Share · Remote-First</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+  <p>This site will use essential cookies plus GA4 and Meta Pixel once the client provides measurement IDs. You can accept analytics cookies or continue with essentials only.</p>
+  <div class="cookie-actions">
+    <button type="button" id="rejectCookies">Essentials only</button>
+    <button type="button" class="accept" id="acceptCookies">Accept analytics</button>
+  </div>
+</div>
+
+<!-- Analytics placeholders: replace G-XXXXXXXXXX and META_PIXEL_ID when provided by the client. -->
+<script>
+  (function(){
+    var banner=document.getElementById('cookieBanner');
+    var accept=document.getElementById('acceptCookies');
+    var reject=document.getElementById('rejectCookies');
+    var saved=localStorage.getItem('sdnd_cookie_choice');
+    if(!saved&&banner)banner.classList.add('show');
+    function choose(value){
+      localStorage.setItem('sdnd_cookie_choice',value);
+      if(banner)banner.classList.remove('show');
+    }
+    if(accept)accept.addEventListener('click',function(){choose('analytics')});
+    if(reject)reject.addEventListener('click',function(){choose('essential')});
+  })();
+</script>
+</body>
+</html>
