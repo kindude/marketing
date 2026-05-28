@@ -102,7 +102,7 @@
 
   /* STATS — overlaps slightly into hero */
   .stats-wrap{position:relative;padding:80px 0 0}
-  .stats{background:var(--navy-2);border:1px solid rgba(255,255,255,0.08);border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+  .stats{background:var(--navy-2);border:1px solid rgba(255,255,255,0.08);border-radius:18px;display:grid;grid-template-columns:repeat(5,1fr);overflow:hidden}
   .stat{padding:36px 32px;border-left:1px solid rgba(255,255,255,0.08);color:#fff}
   .stat:first-child{border-left:none}
   .stat .n{font-size:54px;line-height:0.95;letter-spacing:-0.035em;font-weight:700;margin-bottom:8px}
@@ -399,6 +399,124 @@
     .final p{max-width:340px}
     .cookie-actions{display:grid;grid-template-columns:1fr;gap:8px}
   }
+
+  /* V3 Bold dark-blue refinement */
+  body[data-screen-label="V3 Bold"]{
+    --navy:#071A31;
+    --navy-2:#061426;
+    --navy-3:#030A14;
+    --mid:#4EA0F2;
+    --mid-2:#7EBBFF;
+    --light:#102D4D;
+    --light-2:#0A213A;
+    --ink:#EAF3FF;
+    --ink-2:#C4D6EA;
+    --grey:#8EA7C2;
+    --grey-2:#6F879F;
+    --line:rgba(157,196,238,0.16);
+    --line-2:rgba(157,196,238,0.09);
+    background:#030A14;
+    color:var(--ink);
+  }
+  body[data-screen-label="V3 Bold"] nav.top{background:rgba(3,10,20,0.88);border-bottom:1px solid rgba(157,196,238,0.14);box-shadow:0 14px 36px -30px rgba(0,0,0,0.9)}
+  body[data-screen-label="V3 Bold"] .logo-mark{background:#0E3157;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08)}
+  body[data-screen-label="V3 Bold"] .logo-word b,
+  body[data-screen-label="V3 Bold"] nav.top ul{color:#F5FAFF}
+  body[data-screen-label="V3 Bold"] .logo-word span{color:rgba(234,243,255,0.5)}
+  body[data-screen-label="V3 Bold"] .nav-toggle{background:#071A31;border-color:rgba(157,196,238,0.18);color:#fff}
+  body[data-screen-label="V3 Bold"] .nav-menu{background:#071A31;border-color:rgba(157,196,238,0.18);box-shadow:0 28px 60px -24px rgba(0,0,0,0.72)}
+  body[data-screen-label="V3 Bold"] .nav-menu a{color:#EAF3FF}
+  body[data-screen-label="V3 Bold"] .nav-menu a:hover{background:rgba(78,160,242,0.12)}
+  body[data-screen-label="V3 Bold"] .btn-primary{background:#EAF3FF;color:#071A31}
+  body[data-screen-label="V3 Bold"] .btn-primary:hover{background:#fff;color:#061426}
+  body[data-screen-label="V3 Bold"] .hero{background:#030A14;border-bottom:1px solid rgba(157,196,238,0.1)}
+  body[data-screen-label="V3 Bold"] .hero-bg{background:
+    radial-gradient(760px 560px at 50% -12%, rgba(78,160,242,0.36), transparent 64%),
+    radial-gradient(620px 520px at 100% 18%, rgba(13,43,78,0.72), transparent 62%),
+    radial-gradient(520px 420px at 0% 100%, rgba(26,95,158,0.24), transparent 64%),
+    linear-gradient(180deg,#030A14 0%,#071A31 74%,#061426 100%);
+  }
+  body[data-screen-label="V3 Bold"] .hero-mesh{opacity:0.62;background-size:58px 58px}
+  body[data-screen-label="V3 Bold"] .hero p.sub{color:rgba(234,243,255,0.88)}
+  body[data-screen-label="V3 Bold"] .hero p.supp,
+  body[data-screen-label="V3 Bold"] .hero-channels{color:rgba(196,214,234,0.72)}
+  body[data-screen-label="V3 Bold"] .hero h1 .bl,
+  body[data-screen-label="V3 Bold"] .final h2 .bl{color:#8CC9FF}
+  body[data-screen-label="V3 Bold"] .stats{background:rgba(6,20,38,0.86);border-color:rgba(157,196,238,0.14);box-shadow:0 28px 80px -52px rgba(0,0,0,0.9)}
+  body[data-screen-label="V3 Bold"] .stat{border-color:rgba(157,196,238,0.12)}
+  body[data-screen-label="V3 Bold"] .stat .l{color:rgba(196,214,234,0.68)}
+  @media (max-width: 1100px) {
+    body[data-screen-label="V3 Bold"] .stats{grid-template-columns:repeat(3,1fr)}
+    body[data-screen-label="V3 Bold"] .stat:nth-child(3){border-left:1px solid rgba(157,196,238,0.12);border-top:none}
+    body[data-screen-label="V3 Bold"] .stat:nth-child(4){border-left:none;border-top:1px solid rgba(157,196,238,0.12)}
+    body[data-screen-label="V3 Bold"] .stat:nth-child(5){border-top:1px solid rgba(157,196,238,0.12)}
+  }
+  body[data-screen-label="V3 Bold"] .sec{background:#061426;border-top:1px solid rgba(157,196,238,0.1)}
+  body[data-screen-label="V3 Bold"] .sec.tint{background:#071A31}
+  body[data-screen-label="V3 Bold"] .sec-head h2,
+  body[data-screen-label="V3 Bold"] .svc h3,
+  body[data-screen-label="V3 Bold"] .step h4,
+  body[data-screen-label="V3 Bold"] .case h3,
+  body[data-screen-label="V3 Bold"] .aud-tile h4,
+  body[data-screen-label="V3 Bold"] .contact-card h3{color:#F5FAFF}
+  body[data-screen-label="V3 Bold"] .sec-head .sec-sub,
+  body[data-screen-label="V3 Bold"] .svc p,
+  body[data-screen-label="V3 Bold"] .step p,
+  body[data-screen-label="V3 Bold"] .case .body p,
+  body[data-screen-label="V3 Bold"] .aud-tile p,
+  body[data-screen-label="V3 Bold"] .contact-card p{color:rgba(196,214,234,0.76)}
+  body[data-screen-label="V3 Bold"] .svc,
+  body[data-screen-label="V3 Bold"] .case,
+  body[data-screen-label="V3 Bold"] .aud-tile,
+  body[data-screen-label="V3 Bold"] .contact-card{background:rgba(10,33,58,0.86);border-color:rgba(157,196,238,0.14);box-shadow:0 24px 60px -42px rgba(0,0,0,0.82)}
+  body[data-screen-label="V3 Bold"] .svc:hover,
+  body[data-screen-label="V3 Bold"] .case:hover,
+  body[data-screen-label="V3 Bold"] .aud-tile:hover{background:#0D2B4E;border-color:rgba(126,187,255,0.45);box-shadow:0 30px 72px -44px rgba(0,0,0,0.92)}
+  body[data-screen-label="V3 Bold"] .svc-ic,
+  body[data-screen-label="V3 Bold"] .aud-tile .ic{background:rgba(234,243,255,0.08);color:#8CC9FF;box-shadow:inset 0 0 0 1px rgba(157,196,238,0.12)}
+  body[data-screen-label="V3 Bold"] .svc-arr,
+  body[data-screen-label="V3 Bold"] .case .niche,
+  body[data-screen-label="V3 Bold"] .eyebrow{color:#8CC9FF}
+  body[data-screen-label="V3 Bold"] .eyebrow .ln{background:#8CC9FF}
+  body[data-screen-label="V3 Bold"] .step .num,
+  body[data-screen-label="V3 Bold"] .ic-tick{background:#4EA0F2;color:#04101F;box-shadow:none;border-color:rgba(234,243,255,0.18)}
+  body[data-screen-label="V3 Bold"] .proc::before{background:repeating-linear-gradient(90deg,rgba(157,196,238,0.22) 0 8px,transparent 8px 16px)}
+  body[data-screen-label="V3 Bold"] .vs-col.them{background:rgba(3,10,20,0.56);border-color:rgba(157,196,238,0.12)}
+  body[data-screen-label="V3 Bold"] .vs-col.us{background:rgba(16,45,77,0.96);border-color:#4EA0F2;box-shadow:0 28px 70px -44px rgba(78,160,242,0.58)}
+  body[data-screen-label="V3 Bold"] .vs-col.them li{color:rgba(196,214,234,0.62)}
+  body[data-screen-label="V3 Bold"] .vs-col.us li{color:#EAF3FF}
+  body[data-screen-label="V3 Bold"] .vs-col .badge{background:#EAF3FF;color:#061426}
+  body[data-screen-label="V3 Bold"] .ic-x{background:rgba(234,243,255,0.06);border-color:rgba(157,196,238,0.16);color:#8EA7C2}
+  body[data-screen-label="V3 Bold"] .case-band{background:#030A14;border-bottom:1px solid rgba(157,196,238,0.14)}
+  body[data-screen-label="V3 Bold"] .metric{background:rgba(78,160,242,0.12);border:1px solid rgba(126,187,255,0.18)}
+  body[data-screen-label="V3 Bold"] .metric .v{color:#B7DDFF}
+  body[data-screen-label="V3 Bold"] .metric .l{color:rgba(234,243,255,0.72)}
+  body[data-screen-label="V3 Bold"] .aud-tile.feature,
+  body[data-screen-label="V3 Bold"] .about-panel,
+  body[data-screen-label="V3 Bold"] .contact-form,
+  body[data-screen-label="V3 Bold"] .final{background:#030A14}
+  body[data-screen-label="V3 Bold"] .about-panel{box-shadow:0 28px 80px -52px rgba(0,0,0,0.9);border:1px solid rgba(157,196,238,0.14)}
+  body[data-screen-label="V3 Bold"] details.q{border-color:rgba(157,196,238,0.14)}
+  body[data-screen-label="V3 Bold"] details.q[open]{background:rgba(10,33,58,0.74)}
+  body[data-screen-label="V3 Bold"] details.q summary{color:#F5FAFF}
+  body[data-screen-label="V3 Bold"] details.q .ans{color:rgba(196,214,234,0.76)}
+  body[data-screen-label="V3 Bold"] details.q .chev{background:rgba(234,243,255,0.08);color:#8CC9FF}
+  body[data-screen-label="V3 Bold"] details.q[open] .chev{background:#4EA0F2;color:#04101F}
+  body[data-screen-label="V3 Bold"] .contact-form{border:1px solid rgba(157,196,238,0.16);box-shadow:0 30px 80px -50px rgba(0,0,0,0.92)}
+  body[data-screen-label="V3 Bold"] .field input,
+  body[data-screen-label="V3 Bold"] .field select,
+  body[data-screen-label="V3 Bold"] .field textarea{background:rgba(234,243,255,0.07);border-color:rgba(157,196,238,0.18)}
+  body[data-screen-label="V3 Bold"] .contact-form .btn,
+  body[data-screen-label="V3 Bold"] .btn-white{background:#EAF3FF;color:#061426}
+  body[data-screen-label="V3 Bold"] .btn-ghost{border-color:rgba(234,243,255,0.32);color:#EAF3FF}
+  body[data-screen-label="V3 Bold"] footer{background:#030A14;border-top:1px solid rgba(157,196,238,0.12)}
+  body[data-screen-label="V3 Bold"] .cookie-banner{background:#071A31;border-color:rgba(157,196,238,0.18);box-shadow:0 28px 80px -42px rgba(0,0,0,0.96)}
+  body[data-screen-label="V3 Bold"] .cookie-banner p{color:rgba(234,243,255,0.78)}
+  body[data-screen-label="V3 Bold"] .cookie-actions button{background:rgba(234,243,255,0.06);border-color:rgba(157,196,238,0.18);color:#EAF3FF}
+  body[data-screen-label="V3 Bold"] .cookie-actions .accept{background:#EAF3FF;color:#061426;border-color:#EAF3FF}
+  @media (max-width: 720px) {
+    body[data-screen-label="V3 Bold"] .step{background:rgba(10,33,58,0.86);border-color:rgba(157,196,238,0.14)}
+  }
 </style>
 </head>
 <body data-screen-label="V3 Bold">
@@ -480,6 +598,7 @@
   <div class="wrap stats-wrap">
     <div class="stats">
       <div class="stat"><div class="n">3<span class="bl">+</span></div><div class="l">Years in Business</div></div>
+      <div class="stat"><div class="n">100<span class="bl">+</span></div><div class="l">Clients Within 2 Years</div></div>
       <div class="stat"><div class="n">£500K<span class="bl">+</span></div><div class="l">Ad Spend Managed</div></div>
       <div class="stat"><div class="n">10<span class="bl">+</span></div><div class="l">Markets Launched</div></div>
       <div class="stat"><div class="n">0%</div><div class="l">Retainer Fee</div></div>
